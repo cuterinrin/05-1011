@@ -5,34 +5,21 @@
 
 int main(int argc, char *argv[]) {
 
+	int num=0;
+	char c;
+	char str[100];
 	
-	char c ;
-	//65~90 대문자
-	//97~122 소문자
-	//48~57 숫자
-	 
-	printf("input a char : ");
-	scanf("%c", &c); 
+	printf("input string : ");
 	
-	if('0' <= c && c <= '9')
+	while((c=getchar()) != '\n')
 	{
-		printf("this is number.");
+		if ('0' <= c && c<= '9')
+			{
+				num++;
+			}
 	}
 	
-	else if('A'<= c && c<= 'Z')
-	{
-		printf("this is capital");
-	}
+	printf("The number of digits are %d", num);
 
-	else if('a'<= c && c<= 'z')
-	{
-		printf("this is small letter.");
-	}
-	
-	else 
-	{
-		printf("this is ect char");
-	}
-	
 	return 0;
 	}
