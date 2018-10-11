@@ -13,17 +13,12 @@ int main(int argc, char *argv[]) {
 	
 	if(i > 0)
 	{
-		printf("양수입니다.");
-	}
-	
-	else if(i == 0)
-	{
-		printf("0입니다.");
+		printf("절대값은  %i 입니다.", i);
 	}
 	
 	else
 	{
-		printf("음수입니다.");
+		printf("절대값은 %i입니다.", -i);
 	}
 	
 	return 0;
