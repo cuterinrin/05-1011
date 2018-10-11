@@ -6,19 +6,32 @@
 int main(int argc, char *argv[]) {
 
 	
-	int i ;
+	char c ;
+	//65~90 대문자
+	//97~122 소문자
+	//48~57 숫자
+	 
+	printf("input a char : ");
+	scanf("%c", &c); 
 	
-	printf("숫자를 입력하세요 : ");
-	scanf("%d", &i); 
-	
-	if(i > 0)
+	if('0' <= c && c <= '9')
 	{
-		printf("절대값은  %i 입니다.", i);
+		printf("this is number.");
 	}
 	
-	else
+	else if('A'<= c && c<= 'Z')
 	{
-		printf("절대값은 %i입니다.", -i);
+		printf("this is capital");
+	}
+
+	else if('a'<= c && c<= 'z')
+	{
+		printf("this is small letter.");
+	}
+	
+	else 
+	{
+		printf("this is ect char");
 	}
 	
 	return 0;
