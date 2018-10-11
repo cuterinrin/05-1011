@@ -5,21 +5,38 @@
 
 int main(int argc, char *argv[]) {
 
-	int num=0;
-	char c;
-	char str[100];
+	int i;
+	int q;
+	int t;
 	
-	printf("input string : ");
+	q=59;
+	t=1;
 	
-	while((c=getchar()) != '\n')
+	do
 	{
-		if ('0' <= c && c<= '9')
+	printf("input number : ");
+	scanf("%d", &i);
 			{
-				num++;
+			if(i > q)
+			{printf("high!\n");
+			t++;
 			}
-	}
+		
+			else if(i < q)
+			{printf("low!\n");
+			t++;
+			}
+		
 	
-	printf("The number of digits are %d", num);
+		
+			else
+			{printf("congraturation!\n");
+			}
+		}
+	}
+	while(i != q);
+
+printf("you tried %i\n", t);
 
 	return 0;
 	}
